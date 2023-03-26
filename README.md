@@ -1,19 +1,39 @@
-# laminas-mvc-skeleton
+# My Albums - Aplicação PHP com Laminas Project
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
+Aplicação Web feita a partir do tutorial apresentado na documentação do framework PHP chamado **Laminas Project** (Antigo Zend Framework).
+
+## Ferramentas e Tecnologias
+
+- HTML - Linguagem de Marcação;
+- CSS - Folhas de Estilo;
+- Bootstrap - Framework CSS;
+- PHP - Linguagem de Programação;
+- MySQL - Sistema de Gerenciamento de Banco de Dados;
+- Laminas Project - Framework PHP;
+- Composer - Gerenciamento de dependências.
+
+<div align="center">
+  <img width="800" alt="Imagem do Projeto" src="./laminas-mvc-php-demo.PNG">
+</div>
+
+## laminas-mvc-skeleton
 
 > ## 🇷🇺 Русским гражданам
-> 
+>
 > Мы, участники Laminas, родились и живем в разных странах. У многих из нас есть друзья, родственники и коллеги как в России, так и в Украине. Некоторые из нас родились в России. Некоторые из нас живут в России. У некоторых бабушки и дедушки сражались с фашистами во Второй мировой войне. Здесь никто не поддерживает фашизм.
-> 
+>
 > У одного из нас есть украинская родственница, которая спаслась из дома вместе с сыном. Поезд задержался из-за бомбежки на дороге впереди. У нас есть друзья, которые прячутся в бомбоубежищах. Мы с тревогой ждем весточки от них после воздушных налетов, которые беспорядочно наносят удары и попадают по больницам, школам, детским садам и домам. Мы не берем это из каких-либо СМИ. Мы наблюдаем это напрямую.
-> 
+>
 > Вы доверяете нам достаточно, чтоб использовать наши программы, и мы просим вас довериться нам вновь. Мы нуждаемся в помощи. Выходите и протестуйте против этой бесполезной войны. Остановите кровопролитие. Скажите "Нет войне!"
-> 
+>
 > ## 🇺🇸 To Citizens of Russia
-> 
+>
 > We at Laminas come from all over the world. Many of us have friends, family and colleagues in both Russia and Ukraine. Some of us were born in Russia. Some of us currently live in Russia. Some have grandparents who fought Nazis in World War II. Nobody here supports fascism.
-> 
+>
 > One team member has a Ukrainian relative who fled her home with her son. The train was delayed due to bombing on the road ahead. We have friends who are hiding in bomb shelters. We anxiously follow up on them after the air raids, which indiscriminately fire at hospitals, schools, kindergartens and houses. We're not taking this from any media. These are our actual experiences.
-> 
+>
 > You trust us enough to use our software. We ask that you trust us to say the truth on this. We need your help. Go out and protest this unnecessary war. Stop the bloodshed. Say "stop the war!"
 
 ## Introduction
@@ -45,9 +65,10 @@ $ composer serve
 
 This will start the cli-server on port 8080, and bind it to all network
 interfaces. You can then visit the site at http://localhost:8080/
+
 - which will bring up Laminas MVC Skeleton welcome page.
 
-**Note:** The built-in CLI server is *for development only*.
+**Note:** The built-in CLI server is _for development only_.
 
 ## Development mode
 
@@ -66,7 +87,7 @@ configuration in `config/autoload/development.local.php.dist`. Enabling
 development mode will copy these files to versions removing the `.dist` suffix,
 while disabling development mode will remove those copies.
 
-Development mode is automatically enabled as part of the skeleton installation process. 
+Development mode is automatically enabled as part of the skeleton installation process.
 After making changes to one of the above-mentioned `.dist` configuration files you will
 either need to disable then enable development mode for the changes to take effect,
 or manually make matching updates to the `.dist`-less copies of those files.
@@ -97,12 +118,12 @@ control. (If you want to make the modifications permanent, edit the
 ## Running Psalm Static Analysis
 
 To run the supplied skeleton static analysis, you need to do one of the following:
-It is recommended to install the test components from laminas (laminas/laminas-test), 
+It is recommended to install the test components from laminas (laminas/laminas-test),
 as this is used in the tests supplied.
 
-  ```bash
-  $ composer require --dev vimeo/psalm psalm/plugin-phpunit laminas/laminas-test
-  ```
+```bash
+$ composer require --dev vimeo/psalm psalm/plugin-phpunit laminas/laminas-test
+```
 
 Once psalm support is present, you can run the static analysis using:
 
@@ -149,7 +170,7 @@ For vagrant documentation, please refer to [vagrantup.com](https://www.vagrantup
 
 This skeleton provides a `docker-compose.yml` for use with
 [docker-compose](https://docs.docker.com/compose/); it
-uses the provided `Dockerfile` to build a docker image 
+uses the provided `Dockerfile` to build a docker image
 for the `laminas` container created with `docker-compose`.
 
 Build and start the image and container using:
@@ -160,8 +181,8 @@ $ docker-compose up -d --build
 
 At this point, you can visit http://localhost:8080 to see the site running.
 
-You can also run commands such as `composer` in the container.  The container 
-environment is named "laminas" so you will pass that value to 
+You can also run commands such as `composer` in the container. The container
+environment is named "laminas" so you will pass that value to
 `docker-compose run`:
 
 ```bash
@@ -169,8 +190,8 @@ $ docker-compose run laminas composer install
 ```
 
 Some composer packages optionally use additional PHP extensions.  
-The Dockerfile contains several commented-out commands 
-which enable some of the more popular php extensions. 
+The Dockerfile contains several commented-out commands
+which enable some of the more popular php extensions.
 For example, to install `pdo-pgsql` support for `laminas/laminas-db`
 uncomment the lines:
 
@@ -219,7 +240,6 @@ http {
     include sites-enabled/*.conf;
 }
 ```
-
 
 Create a virtual host configuration file for your project under `/path/to/nginx/sites-enabled/laminasapp.localhost.conf`
 it should look something like below:
